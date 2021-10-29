@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUrl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -21,25 +21,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/ivFoto"
+        app:layout_constraintTop_toTopOf="@+id/ivFoto" />
 
     <TextView
         android:id="@+id/tvApellidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvNombre"
-        app:layout_constraintStart_toStartOf="@+id/tvNombre"
-        tools:layout_editor_absoluteY="55dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvNombre"
+        app:layout_constraintTop_toTopOf="@+id/tvNombre"
+        tools:layout_editor_absoluteX="242dp" />
 
     <TextView
         android:id="@+id/tvFamilia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvApellidos"
-        app:layout_constraintStart_toStartOf="@+id/tvApellidos"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
+        app:layout_constraintStart_toStartOf="@+id/tvTitulo"
         tools:layout_editor_absoluteY="91dp" />
 
     <TextView
@@ -47,16 +47,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvFamilia"
-        app:layout_constraintStart_toStartOf="@+id/tvFamilia"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tvNombre"
+        app:layout_constraintStart_toStartOf="@+id/tvNombre"
+        tools:layout_editor_absoluteY="53dp" />
 
     <TextView
         android:id="@+id/tvUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/tvNombre"
-        app:layout_constraintTop_toTopOf="@+id/tvNombre" />
+        app:layout_constraintEnd_toEndOf="@+id/tvFamilia"
+        app:layout_constraintStart_toStartOf="@+id/tvFamilia"
+        tools:layout_editor_absoluteY="125dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
