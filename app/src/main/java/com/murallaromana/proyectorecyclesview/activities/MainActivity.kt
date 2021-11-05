@@ -29,9 +29,10 @@ class MainActivity : AppCompatActivity() {
         //asociamos el recyclesview con sus componentes
         binding.rvListaPersonajes.adapter=adapter
         binding.rvListaPersonajes.layoutManager=layoutManager
+        binding.rvListaPersonajes.setHasFixedSize(true)
 
 
-/*        val p = Personaje(
+/*       val p = Personaje(
             0,
             "jonh",
             "nieve",

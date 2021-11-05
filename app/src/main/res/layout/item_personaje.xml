@@ -28,35 +28,36 @@
         android:id="@+id/tvApellidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/tvNombre"
-        app:layout_constraintTop_toTopOf="@+id/tvNombre"
-        tools:layout_editor_absoluteX="242dp" />
+        app:layout_constraintStart_toEndOf="@+id/tvNombre" />
 
     <TextView
         android:id="@+id/tvFamilia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
         app:layout_constraintStart_toStartOf="@+id/tvTitulo"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvNombre"
         app:layout_constraintStart_toStartOf="@+id/tvNombre"
-        tools:layout_editor_absoluteY="53dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
     <TextView
         android:id="@+id/tvUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvFamilia"
         app:layout_constraintStart_toStartOf="@+id/tvFamilia"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFamilia" />
 </androidx.constraintlayout.widget.ConstraintLayout>
