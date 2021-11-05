@@ -11,6 +11,7 @@ import com.murallaromana.proyectorecyclesview.model.entities.Personaje
 import com.squareup.picasso.Picasso
 
 class ListaPersonajesAdapter(val personajes: List<Personaje>):RecyclerView.Adapter<ListaPersonajesAdapter.PersonajesViewHolder>() {
+
     class PersonajesViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         val tvNombre=itemView.findViewById<TextView>(R.id.tvNombre)
         val tvApellidos=itemView.findViewById<TextView>(R.id.tvApellidos)
@@ -35,7 +36,8 @@ class ListaPersonajesAdapter(val personajes: List<Personaje>):RecyclerView.Adapt
         holder.tvFamilia.setText(personaje.familia)
         holder.tvUrl.setText(personaje.url)
 
-        Picasso.get().load("www.crushpixel.com/es/stock-vector/autism-spectrum-disorder-concept-icon-3826333.html").into(holder.ivFoto)
+        Picasso.get().isLoggingEnabled = true
+        Picasso.get().load(personaje.url).into(holder.ivFoto)
     }
 
     override fun getItemCount(): Int {
