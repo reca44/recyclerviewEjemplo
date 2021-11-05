@@ -35,7 +35,6 @@ class ListaPersonajesAdapter(val personajes: List<Personaje>):RecyclerView.Adapt
         holder.tvTitulo.setText(personaje.titulo)
         holder.tvFamilia.setText(personaje.familia)
         holder.tvUrl.setText(personaje.url)
-
         Picasso.get().isLoggingEnabled = true
         Picasso.get().load(personaje.url).into(holder.ivFoto)
     }
