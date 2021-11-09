@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     //obtenemos datos
         val personajesDao = PersonajesDaoMockImpl()
         val listaPersonajes = personajesDao.getTodos()
-//creamos componentes
+    //creamos componentes
         val layoutManager = LinearLayoutManager(this)
         val adapter = ListaPersonajesAdapter(listaPersonajes)
 
